@@ -1,0 +1,1058 @@
+/* Start Global Values */
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  background-color: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+:root {
+  --main-color: #1a1a1a;
+  --main-color-alt: #333;
+  --main-t: 0.3s;
+  --calm-red: #d2686e;
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  animation: myfading 0.3s linear;
+  -webkit-animation: myfading 0.3s linear;
+}
+
+@keyframes myfading {
+  from {
+    opacity: 0;
+    -webkit-transition: opacity;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--main-color);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--main-color-alt);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+/* End Global Rules */
+/* Start Static Values */
+.row1,
+.row2,
+.row3,
+.row4,
+.row5,
+.row6 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+span {
+  font-size: 10px;
+  font-weight: 600;
+  color: #eee;
+}
+
+.row1 div,
+.row2 div,
+.row3 div,
+.row4 div,
+.row5 div,
+.row6 div {
+  background-color: var(--main-color);
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  box-shadow: 1px 1px 10px var(--main-color), -1px -1px 10px var(--main-color);
+  transition: var(--main-t);
+  -webkit-transition: var(--main-t);
+  -moz-transition: var(--main-t);
+  -ms-transition: var(--main-t);
+  -o-transition: var(--main-t);
+}
+
+.row1 div:hover,
+.row2 div:hover,
+.row3 div:hover,
+.row4 div:hover,
+.row5 div:hover,
+.row6 div:hover {
+  cursor: pointer;
+  transition: var(--main-t);
+  -webkit-transition: var(--main-t);
+  -moz-transition: var(--main-t);
+  -ms-transition: var(--main-t);
+  -o-transition: var(--main-t);
+  box-shadow: none;
+}
+
+.row1 div:first-child,
+.row3 div:first-child,
+.row4 div:first-child,
+.row5 div:first-child,
+.row6 div:first-child {
+  padding: 25px 25px 5px;
+}
+
+.row2 div {
+  padding: 25px 20px 5px;
+}
+
+.row1 div:not(:first-child),
+.row3 div:not(:first-child),
+.row4 div:not(:first-child),
+.row5 div:not(:first-child),
+.row6 div:not(:first-child) {
+  padding: 25px 20px 5px;
+}
+
+.row1,
+.row2,
+.row3,
+.row4,
+.row5 {
+  margin-bottom: 15px;
+}
+/* End Static Values */
+/* Start Main Values */
+.effect {
+  z-index: 1;
+  position: relative;
+  background-color: var(--main-color-alt);
+  padding: 5px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  overflow: hidden;
+}
+.container {
+  padding: 25px;
+  width: 950px;
+  position: relative;
+  background-color: var(--main-color-alt);
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  box-shadow: 2px 2px 10px var(--main-color);
+}
+
+.effect::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 1100px;
+  left: 43%;
+  top: -350px;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(0deg, transparent, transparent, white, white);
+  animation: animate 8s linear infinite;
+  -webkit-animation: animate 8s linear infinite;
+  transform-origin: center;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+  }
+}
+.space {
+  width: 150px;
+  height: 50px;
+}
+
+.red {
+  background-color: var(--calm-red) !important;
+  box-shadow: 1px 1px 10px var(--calm-red), -1px -1px 10px var(--calm-red) !important;
+}
+
+.red:hover {
+  box-shadow: none !important;
+}
+
+.esc {
+  padding: 25px 70px 5px 5px !important;
+}
+
+.delete {
+  padding: 25px 5px 5px 70px !important;
+}
+
+.up {
+  height: 52px;
+  width: 50px;
+}
+
+.shift {
+  padding: 25px 120px 5px 5px !important;
+}
+
+.arrow {
+  width: 52px;
+  height: 50px;
+}
+
+.shiftlast {
+  padding: 25px 5px 5px 120px !important;
+}
+
+.caps {
+  padding: 25px 70px 5px 5px !important;
+}
+
+.plow {
+  padding: 25px 15px 5px !important;
+}
+
+.fn {
+  padding: 25px 35px 5px 5px !important;
+}
+
+.return {
+  padding: 25px 5px 5px 70px !important;
+}
+/* End Main Values */
+/* Start Secondary Values */
+.row1 div:nth-child(2) {
+  position: relative;
+}
+
+.row1 div:nth-child(2)::after {
+  content: "\e518";
+  position: absolute;
+  font-family: "Material Icons";
+  font-size: 6px;
+  top: 15px;
+  color: #eee;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.row1 div:nth-child(3) {
+  position: relative;
+}
+
+.row1 div:nth-child(3)::after {
+  content: "\e518";
+  position: absolute;
+  font-family: "Material Icons";
+  font-size: 8px;
+  color: #eee;
+  top: 15px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.row1 div:nth-child(8) {
+  position: relative;
+}
+
+.row1 div:nth-child(8)::after {
+  content: "\f04a";
+  position: absolute;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  font-size: 8px;
+  color: #eee;
+  top: 15px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.row1 div:nth-child(9) {
+  position: relative;
+}
+
+.row1 div:nth-child(9)::after {
+  content: "\f04b \f04c";
+  position: absolute;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  font-size: 8px;
+  color: #eee;
+  top: 15px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.row1 div:nth-child(10) {
+  position: relative;
+}
+
+.row1 div:nth-child(10)::after {
+  content: "\f04e";
+  position: absolute;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  font-size: 8px;
+  color: #eee;
+  top: 15px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.row1 div:nth-child(11) {
+  position: relative;
+}
+
+.row1 div:nth-child(11)::after {
+  content: "\f026";
+  position: absolute;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  font-size: 8px;
+  color: #eee;
+  top: 15px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.row1 div:nth-child(12) {
+  position: relative;
+}
+
+.row1 div:nth-child(12)::after {
+  content: "\f027";
+  position: absolute;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  font-size: 8px;
+  color: #eee;
+  top: 15px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.row1 div:nth-child(13) {
+  position: relative;
+}
+
+.row1 div:nth-child(13)::after {
+  content: "\f028";
+  position: absolute;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  font-size: 8px;
+  color: #eee;
+  top: 15px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.row1 div:nth-child(14) {
+  position: relative;
+}
+
+.row1 div:nth-child(14)::after {
+  content: "\f052";
+  position: absolute;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  font-size: 8px;
+  color: #eee;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.row2 div:first-child {
+  position: relative;
+}
+
+.row2 div:first-child::after {
+  content: "~";
+  position: absolute;
+  font-size: 8px;
+  color: #eee;
+  top: 15px;
+  font-weight: 900;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.row2 div:nth-child(2) {
+  position: relative;
+}
+
+.row2 div:nth-child(2)::after {
+  content: "\21";
+  position: absolute;
+  font-size: 8px;
+  color: #eee;
+  font-weight: 900;
+  top: 15px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.row2 div:nth-child(3) {
+  position: relative;
+}
+
+.row2 div:nth-child(3)::after {
+  content: "@";
+  position: absolute;
+  font-size: 8px;
+  color: #eee;
+  font-weight: 900;
+  top: 15px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.row2 div:nth-child(4) {
+  position: relative;
+}
+
+.row2 div:nth-child(4)::after {
+  content: "#";
+  position: absolute;
+  font-size: 8px;
+  color: #eee;
+  font-weight: 900;
+  top: 15px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.row2 div:nth-child(5) {
+  position: relative;
+}
+
+.row2 div:nth-child(5)::after {
+  content: "$";
+  position: absolute;
+  font-size: 8px;
+  font-weight: 900;
+  color: #eee;
+  top: 15px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.row2 div:nth-child(6) {
+  position: relative;
+}
+
+.row2 div:nth-child(6)::after {
+  content: "%";
+  position: absolute;
+  font-size: 8px;
+  color: #eee;
+  font-weight: 900;
+  top: 15px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.row2 div:nth-child(7) {
+  position: relative;
+}
+
+.row2 div:nth-child(7)::after {
+  content: "\f077";
+  position: absolute;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 8px;
+  color: #eee;
+  top: 15px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.row2 div:nth-child(8) {
+  position: relative;
+}
+
+.row2 div:nth-child(8)::after {
+  content: "&";
+  position: absolute;
+  font-size: 8px;
+  color: #eee;
+  font-weight: 900;
+  top: 15px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.row2 div:nth-child(9) {
+  position: relative;
+}
+
+.row2 div:nth-child(9)::after {
+  content: "*";
+  position: absolute;
+  font-size: 8px;
+  color: #eee;
+  font-weight: 900;
+  top: 15px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.row2 div:nth-child(10) {
+  position: relative;
+}
+
+.row2 div:nth-child(10)::after {
+  content: "(";
+  position: absolute;
+  font-size: 8px;
+  color: #eee;
+  font-weight: 900;
+  top: 15px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.row2 div:nth-child(11) {
+  position: relative;
+}
+
+.row2 div:nth-child(11)::after {
+  content: ")";
+  position: absolute;
+  font-size: 8px;
+  color: #eee;
+  font-weight: 900;
+  top: 15px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.row2 div:nth-child(12) {
+  position: relative;
+}
+
+.row2 div:nth-child(12)::after {
+  content: "__";
+  position: absolute;
+  font-size: 8px;
+  color: #eee;
+  font-weight: 900;
+  top: 15px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.row2 div:nth-child(13) {
+  position: relative;
+}
+
+.row2 div:nth-child(13)::after {
+  content: "\2b";
+  position: absolute;
+  font-size: 8px;
+  color: #eee;
+  font-weight: 600;
+  font-family: "Font Awesome 5 Free";
+  top: 15px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.row3 div:nth-child(12) {
+  position: relative;
+}
+
+.row3 div:nth-child(12)::after {
+  content: "{";
+  position: absolute;
+  font-size: 8px;
+  color: #eee;
+  font-weight: 600;
+  font-family: "Font Awesome 5 Free";
+  top: 15px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.row3 div:nth-child(13) {
+  position: relative;
+}
+
+.row3 div:nth-child(13)::after {
+  content: "}";
+  position: absolute;
+  font-size: 8px;
+  color: #eee;
+  font-weight: 600;
+  font-family: "Font Awesome 5 Free";
+  top: 15px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.row3 div:nth-child(14) {
+  position: relative;
+}
+
+.row3 div:nth-child(14)::after {
+  content: "|";
+  position: absolute;
+  font-size: 8px;
+  color: #eee;
+  font-weight: 600;
+  font-family: "Font Awesome 5 Free";
+  top: 15px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.row4 div:first-child {
+  position: relative;
+}
+
+.row4 div:first-child::after {
+  content: "";
+  position: absolute;
+  font-size: 8px;
+  width: 3px;
+  height: 3px;
+  border-radius: 100%;
+  background-color: #eee;
+  font-weight: 600;
+  font-family: "Font Awesome 5 Free";
+  top: 10px;
+  left: 10%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+}
+
+.row4 div:nth-child(11) {
+  position: relative;
+}
+
+.row4 div:nth-child(11)::after {
+  content: ":";
+  position: absolute;
+  font-size: 8px;
+  color: #eee;
+  font-weight: 600;
+  font-family: "Font Awesome 5 Free";
+  top: 15px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.row4 div:nth-child(12) {
+  position: relative;
+}
+
+.row4 div:nth-child(12)::after {
+  content: "”";
+  position: absolute;
+  font-size: 8px;
+  color: #eee;
+  font-weight: 600;
+  font-family: "Font Awesome 5 Free";
+  top: 15px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.row5 div:nth-child(9) {
+  position: relative;
+}
+
+.row5 div:nth-child(9)::after {
+  content: "<";
+  position: absolute;
+  font-size: 8px;
+  color: #eee;
+  font-weight: 600;
+  font-family: "Font Awesome 5 Free";
+  top: 15px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.row5 div:nth-child(10) {
+  position: relative;
+}
+
+.row5 div:nth-child(10)::after {
+  content: ">";
+  position: absolute;
+  font-size: 8px;
+  color: #eee;
+  font-weight: 600;
+  font-family: "Font Awesome 5 Free";
+  top: 15px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.row5 div:nth-child(11) {
+  position: relative;
+}
+
+.row5 div:nth-child(11)::after {
+  content: "?";
+  position: absolute;
+  font-size: 8px;
+  color: #eee;
+  font-weight: 600;
+  font-family: "Font Awesome 5 Free";
+  top: 15px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.row6 div:nth-child(2) {
+  position: relative;
+}
+
+.row6 div:nth-child(2)::after {
+  content: "\f077";
+  position: absolute;
+  font-size: 8px;
+  color: #eee;
+  font-weight: 600;
+  font-family: "Font Awesome 5 Free";
+  top: 15px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.row6 div:nth-child(8) {
+  position: relative;
+}
+
+.row6 div:nth-child(8)::after {
+  content: "\f0d9";
+  position: absolute;
+  font-size: 8px;
+  color: #eee;
+  font-weight: 600;
+  font-family: "Font Awesome 5 Free";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.row6 div:nth-child(9) {
+  position: relative;
+}
+
+.row6 div:nth-child(9)::after {
+  content: "\f0de";
+  position: absolute;
+  font-size: 8px;
+  color: #eee;
+  font-weight: 600;
+  font-family: "Font Awesome 5 Free";
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.row6 div:nth-child(9)::before {
+  content: "\f0dd";
+  position: absolute;
+  font-size: 8px;
+  color: #eee;
+  font-weight: 600;
+  font-family: "Font Awesome 5 Free";
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.row6 div:nth-child(10) {
+  position: relative;
+}
+
+.row6 div:nth-child(10)::after {
+  content: "\f0da";
+  position: absolute;
+  font-size: 8px;
+  color: white;
+  font-weight: 600;
+  font-family: "Font Awesome 5 Free";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+/* End Secondary Values */
+/* Start Signature */
+a.signature {
+  text-align: center;
+  margin: 25px;
+  padding: 0;
+  font-family: "Freehand";
+  font-size: 25px;
+  color: var(--main-color-alt);
+}
+
+a.signature p {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.signature p::after {
+  content: "";
+  position: absolute;
+  background-color: var(--main-color);
+  width: 50px;
+  height: 2px;
+  z-index: 1;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  bottom: -5px;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transition: var(--main-t);
+  -webkit-transition: var(--main-t);
+  -moz-transition: var(--main-t);
+  -ms-transition: var(--main-t);
+  -o-transition: var(--main-t);
+}
+
+a.signature p:hover::after {
+  width: 180px;
+  transition: var(--main-t);
+  -webkit-transition: var(--main-t);
+  -moz-transition: var(--main-t);
+  -ms-transition: var(--main-t);
+  -o-transition: var(--main-t);
+}
+/* End Signature */
